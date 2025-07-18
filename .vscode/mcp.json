@@ -1,0 +1,22 @@
+{
+    "inputs": [
+        {
+            "type": "promptString",
+            "id": "perplexity-key",
+            "description": "Perplexity API Key",
+            "password": true
+        }
+    ],
+    "servers": {
+        "Perplexity": {
+            "type": "stdio",
+            "command": "node",
+            "args": [
+                "C:\\Users\\Admin\\Desktop\\Gen_AI\\modelcontextprotocol\\perplexity-ask\\dist\\index.js"
+            ],
+            "env": {
+                "PERPLEXITY_API_KEY": "${input:perplexity-key}"
+            }
+        }
+    }
+}
